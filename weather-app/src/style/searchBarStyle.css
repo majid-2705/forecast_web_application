@@ -1,0 +1,104 @@
+.sidebarContainer {
+width: 25%;
+position: fixed;
+top: 57px;
+left:0;
+z-index: 1;
+height: 100%;
+background-color: white;
+}
+
+
+input {
+width: 100%;
+border: none;
+margin-left: 8px;
+font-weight: 100;
+height: 24px;
+}
+
+input:focus {
+outline: none;
+}
+
+.searchContainer {
+display: flex;
+align-items: center;
+margin-left: 16px;
+margin-right: 16px;
+padding-top: 16px;
+justify-content: center;
+}
+
+.icon {
+height: 20px;
+width: 20px
+}
+
+.deleteIcon {
+margin-left: 6px;
+width: 30px;
+height:30px;
+}
+
+.weatherImg {
+width: 120px;
+height: 120px;
+margin-top :16px;
+margin-left: 24px
+}
+
+.sidebarContainer .temperature {
+max-width: 100%;
+height: 48px;
+margin-top :16px;
+margin-left: 24px;
+font: italic bold 26px  Georgia;
+color: #6B6464;
+}
+
+.date {
+font: bold 20px Lucida Handwriting, cursive;
+margin: 8px 0px 36px 24px;
+color: #6B6464
+}
+
+.separator {
+margin: 16px 24px ;
+border-top: 1px solid #ddd;
+border-radius: 3px;
+}
+
+.weatherState {
+margin-left: 24px;
+font: 16px Alegreya;
+color: #6B6464;
+}
+
+.weatherState p:first-child {
+margin-bottom: 4px;
+}
+
+.countryAndCity {
+margin-left: 16px;
+margin-top: 24px;
+font: 24px bold;
+color: #6B6464;
+}
+
+@media only screen and (max-width: 768px) {
+.sidebarContainer{width: 35%}
+}
+@media only screen and (max-width: 425px) {
+.sidebarContainer
+{
+width: 100%;
+position: static;
+margin-top: -57px;
+padding-bottom: 16px;
+}
+.searchContainer {
+padding-top: 8px;
+width: 75%
+}
+}

@@ -1,0 +1,24 @@
+.errorContainer {
+box-size: border-box;
+width: 500px;
+height: 50vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: calc(20%);
+left: calc(50% - 250px)
+}
+
+h1 {
+color: gray;
+}
+
+@media only screen and (max-width: 425px)
+{
+.errorContainer {
+width: 100%;
+left: 0;
+text-align: center;
+}
+}

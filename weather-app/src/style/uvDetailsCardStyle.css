@@ -1,0 +1,23 @@
+.uvDetailsCardContainer {
+border-radius: 3px;
+border: 1px solid black;
+box-shadow: 2px 3px 3px 3px gray;
+background-color: white;
+border-radius: 4px;
+background-color: white;
+}
+
+.uvCardHeader {
+margin-left: 16px;
+margin-top: 16px;
+font: italic small-caps bold 16px Georgia, serif;
+color: gray;
+}
+
+@media only screen and (max-width: 425px) {
+.uvDetailsCardContainer {
+height: 100%;
+width:100%;
+margin: 0
+}
+}

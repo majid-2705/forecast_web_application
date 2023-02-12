@@ -1,0 +1,69 @@
+.windDetailsCardContainer
+{
+border-radius: 3px;
+border: 1px solid black;
+box-shadow: 2px 3px 3px 3px gray;
+border-radius: 4px;
+background-color: white;
+}
+.card{
+height: 100%;
+display: flex;
+flex-flow: column;
+justify-content: space-between;
+}
+
+.header
+{
+margin-left: 16px;
+margin-top: 16px;
+font: italic small-caps bold 16px Georgia, serif;
+color: gray
+}
+
+.windSpeedContainer, .windDirectionContainer
+{
+display: flex;
+align-items: center;
+margin-left: 16px
+}
+
+.windSpeedContainer img {
+height: 40px;
+width: 40px;
+}
+
+.windSpeed ,  .humidity{
+font: italic small-caps 32px Georgia, serif;
+color: black;
+}
+
+.windSpeedContainer span{
+font: italic  24px alegreya, serif !important;
+margin-left: 2px !important;
+color: black !important;
+}
+
+.windDirectionContainer{
+margin-bottom: 16px;
+}
+
+.windDirectionContainer p{
+font: italic 12px Georgia, serif;
+}
+
+.windDirectionContainer img {
+height: 24px;
+width: 24px;
+margin-right: 8px;
+}
+
+@media only screen and (max-width: 425px)
+{
+.windDetailsCardContainer{
+
+height: 100%;
+width:100%;
+margin: 0
+}
+}

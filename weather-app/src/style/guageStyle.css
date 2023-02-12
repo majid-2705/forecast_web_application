@@ -1,0 +1,117 @@
+:root {
+--height: 110px;
+--coverColor: white;
+--indexColor: #BBB8B8;
+--barColor: #AE00FF;
+}
+
+.guageContainer {
+background-color: var(--coverColor);
+width: 100%;
+
+height: var(--height);
+flex-grow: 1;
+display: flex;
+justify-content:center;
+align-items: center;
+position: relative;
+overflow:hidden
+}
+
+.guageChildContainer {
+width: calc(var(--height)*2) ;
+height: calc(var(--height)*2);
+position: absolute;
+top: -8px;;
+display: flex;
+background-color:white;
+justify-content: center;
+align-items: center;
+}
+
+.index, .indexContainer, .indexCover, .cover {
+position: absolute;
+border-radius: 50%;
+}
+
+.indexContainer {
+width: calc(var(--height)*2*.9);
+height: calc(var(--height)*2*.9);
+background-color: var(--coverColor);
+position: absolute;
+overflow:hidden;
+}
+
+.index {
+width: calc(var(--height)*2*.8);
+height: calc(var(--height)*2*.8);
+background-color: var(--indexColor);
+}
+
+.indexCover {
+width: calc(var(--height)*2*.7);
+height: calc(var(--height)*2*.7);
+background-color: white;
+}
+
+.rotativeRect {
+position:absolute;
+width:100%;
+height: 50%;
+background-color: var(--barColor);
+top: 50%;
+transform-origin: top center;
+z-index: 1;
+}
+
+.cover {
+width: calc(var(--height)*2*.6);
+height: calc(var(--height)*2*.6);
+background-color:white;
+display: flex;
+justify-content: center;
+z-index: 2;
+}
+
+.cover p {
+font: italic small-caps 40px Georgia, serif;
+padding: 8px;
+}
+
+.rect {
+width: 100%;
+height: 50%;
+position: absolute;
+top: 50%;
+background-color: white;
+z-index: 3;
+}
+
+.span1Container, .span2Container {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+left: -4px;
+z-index:4;
+}
+
+.span1Container {
+transform: rotate(45deg);
+transform-origin:114px;
+}
+
+.span1Container span {
+transform: rotate(-45deg);
+color: var(--indexColor);
+}
+.span2Container {
+transform: rotate(135deg);
+transform-origin:114px;
+}
+
+.span2Container span {
+transform: rotate(-135deg);
+color: var(--indexColor);
+}
+

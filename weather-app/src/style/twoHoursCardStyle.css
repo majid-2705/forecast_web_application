@@ -1,0 +1,38 @@
+.weatherCard {
+display: flex;
+flex-flow: column;
+justify-content:space-between;
+background-color: white;
+border-radius:3px;
+box-shadow: 3px 3px 2px gray;
+height: 150px;
+}
+
+.weatherCard .image {
+max-height: 50%;
+}
+
+.weatherCard .temperature, .weatherCard .description {
+font: 14px georgia;
+font-family: alegreya;
+text-align: center;
+}
+
+.weatherCard .description {
+margin-top: 6px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+margin-left: 8px;
+margin-right: 8px
+}
+
+.weatherCard .temperature {
+margin-bottom: 6px;
+}
+
+
+
+
+
+

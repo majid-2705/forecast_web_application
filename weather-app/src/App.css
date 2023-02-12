@@ -1,0 +1,35 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+.pageContainer {
+display: flex;
+margin-top: 57px;
+
+}
+
+.mainSectionContainer {
+width: 75%;
+margin-left: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+.mainSectionContainer {
+width: 65%;
+margin-left: 35%;
+}
+}
+
+@media only screen and (max-width: 425px) {
+.pageContainer {
+display: block;
+width: 100%;
+}
+
+.mainSectionContainer {
+margin-left: 0;
+width: 100%
+}
+}
+

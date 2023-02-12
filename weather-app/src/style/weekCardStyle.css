@@ -1,0 +1,71 @@
+.weekCard {
+display: flex;
+flex-flow: column;
+justify-content: space-between;
+background-color: white;
+box-shadow: 3px 3px 2px 2px gray;
+border-radius:3px;
+height: 180px
+}
+
+.weekCard:hover {
+cursor: pointer;
+opacity: 0.8
+}
+
+.weekCard .image {
+max-height: 50%;
+}
+
+.weekCard .temperature, .weekCard .description {
+font: 14px georgia;
+font-family: alegreya;
+text-align: center;
+}
+
+.weekCard .description {
+margin-top: 6px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+margin-left: 8px;
+margin-right: 8px;
+}
+
+.weekCard .maxTempContainer, .weekCard .minTempContainer {
+display: flex;
+margin:0;
+padding: 0;
+width: 100%;
+justify-content: center;
+align-items: center;
+}
+
+.weekCard .maxTempContainer img, .weekCard .minTempContainer img {
+height: 24px;
+width: 24px;
+margin-right: 4px;
+}
+
+.weekCard .minTempContainer {
+margin-bottom: 6px;
+}
+
+.weekCard .maxTempContainer {
+margin-bottom: 6px;
+}
+
+@media only screen and (max-width: 425px) {
+.min_maxTempContainer {
+display: flex;
+justify-content: center;
+}
+
+.weekCard .maxTempContainer {
+width: 20%;
+}
+
+.weekCard .minTempContainer {
+width: 20%
+}
+}
