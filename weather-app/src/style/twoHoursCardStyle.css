@@ -12,7 +12,7 @@ height: 150px;
 max-height: 50%;
 }
 
-.weatherCard .temperature, .weatherCard .description {
+.weatherCard .temperature, .weatherCard .description, .weatherCard showDescription{
 font: 14px georgia;
 font-family: alegreya;
 text-align: center;
@@ -24,11 +24,36 @@ text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
 margin-left: 8px;
-margin-right: 8px
+margin-right: 8px;
+cursor: pointer;
+}
+
+.weatherCard .showDescription {
+background-color: #D3D3D3;
+border-radius: 2px;
+box-shadow: 1px 1px 1px 1px #BDBDBD;
+position: absolute;
+top: 3px;
+right: 3px;
+left: 3px;
+white-space: normal;
+animation: tran 0.7s;
+}
+
+@keyframes tran {
+from {transform: translateY(-12px)}
+to {transform: translateY(0)}
 }
 
 .weatherCard .temperature {
 margin-bottom: 6px;
+}
+
+@media screen and (max-width : 768px)
+{
+.showDescription {
+display: none;
+}
 }
 
 

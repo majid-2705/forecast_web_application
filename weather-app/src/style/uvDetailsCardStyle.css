@@ -5,6 +5,9 @@ box-shadow: 2px 3px 3px 3px gray;
 background-color: white;
 border-radius: 4px;
 background-color: white;
+width: 32%;
+min-width: 280px;
+height: 150px;
 }
 
 .uvCardHeader {
@@ -14,10 +17,30 @@ font: italic small-caps bold 16px Georgia, serif;
 color: gray;
 }
 
-@media only screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 .uvDetailsCardContainer {
-height: 100%;
 width:100%;
-margin: 0
 }
 }
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+.uvDetailsCardContainer {
+min-width: 215px;
+width:48%;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+.uvDetailsCardContainer {
+min-width: 200px;
+width:48%;
+}
+}
+
+@media screen and (min-width: 1025px){
+.uvDetailsCardContainer {
+min-width: 215px;
+width:32%;
+}
+}
+

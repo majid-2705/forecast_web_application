@@ -4,7 +4,13 @@ let Error =({city})=>{
 return(
 <>
     <div className="errorContainer">
-    <h1>Error, "{city}" doesn&#39;t exist</h1>
+    {
+    city ?
+    <h1>Error, "{city}" doesn&#39;t exist</h1> :
+    <h1>Error, your location isn&#39;t detectable</h1>
+
+    }
+
     </div>
 </>
 )

@@ -5,7 +5,7 @@ padding: 0;
 
 .pageContainer {
 display: flex;
-margin-top: 57px;
+margin-top: 64px;
 
 }
 
@@ -14,22 +14,18 @@ width: 75%;
 margin-left: 25%;
 }
 
-@media only screen and (max-width: 768px) {
-.mainSectionContainer {
-width: 65%;
-margin-left: 35%;
-}
-}
-
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px ) {
 .pageContainer {
 display: block;
-width: 100%;
+width: 100%;;
+margin-bottom: 24px;
 }
 
 .mainSectionContainer {
 margin-left: 0;
-width: 100%
+width: 100%;
 }
 }
+
+
 

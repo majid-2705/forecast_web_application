@@ -14,14 +14,13 @@ import '../style/todayStyle.css'
 import {useSelector, useDispatch} from 'react-redux'
 import {useGetNowCastQuery, useGetWeekCastQuery} from '../redux/services/weatherApi'
 import {weatherIconsArray} from '../assets/api'
-import {settings} from '../assets/slideSettings'
 import {setCity, setClickedCardIndex, setPreviousUvIndex} from '../redux/slices/locationSlice'
 import {Context} from '../App'
 const Today = () =>{
 
 const {clickedCardIndex,previousUvIndex} = useSelector(state => state.location)
 
-const {city} = useSelector(state =>state.location)
+const {city, id} = useSelector(state =>state.location)
 const dispatch = useDispatch()
 const {cityParam} = useParams();
 
@@ -32,10 +31,10 @@ dispatch(setCity(cityParam))
 const {locationData} = useContext(Context)
 
 //fetch data of one week, including today's highlight
-const {data: weekData, isFteching: isFetchingWeek, isLoading: isLoadingWeek,isError: isErrorWeek} = useGetWeekCastQuery(locationData?.locations[0]?.id, { skip: !city ? true : false })
+const {data: weekData, isFteching: isFetchingWeek, isLoading: isLoadingWeek,isError: isErrorWeek} = useGetWeekCastQuery(id, { skip: !id ? true : false })
 
 //fetch data for the upcoming 2 hours (every 15 min)
-const {data, isFetching: isFetchingHourly, isLoading, isError: isErrorNow} = useGetNowCastQuery(locationData?.locations[0]?.id, {skip: !city ? true : false})
+const {data, isFetching: isFetchingHourly, isLoading, isError: isErrorNow} = useGetNowCastQuery(id, {skip: !id ? true : false})
 
 
 return(

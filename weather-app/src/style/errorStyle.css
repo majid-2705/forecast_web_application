@@ -1,20 +1,20 @@
 .errorContainer {
 box-size: border-box;
-width: 500px;
+width: 700px;
 height: 50vh;
 display: flex;
 justify-content: center;
 align-items: center;
 position: absolute;
 top: calc(20%);
-left: calc(50% - 250px)
+left: calc(50% - 350px)
 }
 
 h1 {
 color: gray;
 }
 
-@media only screen and (max-width: 425px)
+@media only screen and (max-width: 768px)
 {
 .errorContainer {
 width: 100%;

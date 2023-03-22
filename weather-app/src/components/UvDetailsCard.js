@@ -42,7 +42,7 @@ let keyFrames =[
 ]
 const duration = 500
 document.getElementById("recto").animate(keyFrames, duration)
-//when animation is finished, rotate in angle that corresponds to the current UVindex
+//when animation is finished, rotate in an angle that corresponds to the current UVindex
 document.getElementById("recto").style.transform = `rotate(${currentUvIndex*180/12}deg)`
 dispatch(setPreviousUvIndex(currentUvIndex))
 }
@@ -56,7 +56,7 @@ let keyFrames =[
 ]
 const duration = 500
 document.getElementById("recto").animate(keyFrames, duration)
-//when animation is finished, rotate in angle that corresponds to the current UVindex
+//when animation is finished, rotate in an angle that corresponds to the current UVindex
 document.getElementById("recto").style.transform = `rotate(${weekData?.forecast[0]?.uvIndex*180/12}deg)`
 
 }

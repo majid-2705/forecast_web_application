@@ -15,13 +15,17 @@ baseQuery : fetchBaseQuery({
     baseUrl : 'https://foreca-weather.p.rapidapi.com/',
             }),
 endpoints: (builder) =>({
-getSearchLocation : builder.query({ query: (city)=> createRequest(`/location/search/${city}`) }),
+//Fetch the forecast data based on the user's location
+getSearchLocation : builder.query({ query: (city)=> createRequest(`/location/search/${city}`)}),
 
+getLoc : builder.query({ query: ({city, country})=> createRequest(`/location/search/${city}?country=${country}`)}),
+
+//fetch current weather forecast
 getCurrentWeatherApi : builder.query({ query:  (id) => createRequest(`/current/${id}`)}),
 
-//this returns data of the forecast for every 15 min
+//fetch data of the forecast for every 15 min
 getNowCast : builder.query({ query: (id) => createRequest(`/forecast/15minutely/${id}`)}),
-
+//fetch data of the forecast for one week
 getWeekCast: builder.query({ query:(id) => createRequest(`/forecast/daily/${id}&?alt=0&tempunit=C&windunit=MS&periods=8&dataset=full`)})
 
 })
@@ -29,4 +33,5 @@ getWeekCast: builder.query({ query:(id) => createRequest(`/forecast/daily/${id}&
 export const {useGetSearchLocationQuery,
                 useGetCurrentWeatherApiQuery,
                 useGetNowCastQuery,
-                useGetWeekCastQuery} = weatherApi
+                useGetWeekCastQuery,
+                useGetLocQuery} = weatherApi

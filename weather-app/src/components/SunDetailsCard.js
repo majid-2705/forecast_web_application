@@ -30,9 +30,11 @@ return(
             (<Card
                             header = 'Sunrise & sunset'
                             riseIcon = {sunrise}
-                            riseTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunrise}
+                            riseTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunrise ?
+                            weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunrise : "Not available"}
                             setIcon = {sunset}
-                            setTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunset}
+                            setTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunset ?
+                            weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.sunset : "Not Available"}
                             />)
      }
 
@@ -42,9 +44,12 @@ return(
                        ( <Card
                         header = 'Moonrise & moonset'
                         riseIcon = {moonrise}
-                        riseTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonrise}
+                        riseTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonrise ?
+                        weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonrise : "Not available"}
                         setIcon = {moonset}
-                        setTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonset}
+                        setTime = {weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonset ?
+                        weekData?.forecast[clickedCardIndex < 0 ? 0 : clickedCardIndex]?.moonset : "Not available"}
+
                         />)
     }
     </div>

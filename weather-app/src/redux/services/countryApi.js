@@ -12,10 +12,14 @@ const createRequest = (url) => ({ url, headers: cryptoNewsHeader});
 export const countryApi = createApi({
 reducerPath: 'countryApi',
 baseQuery : fetchBaseQuery({
-    baseUrl : 'https://spott.p.rapidapi.com/'
+      baseUrl : 'https://spott.p.rapidapi.com'
             }),
 endpoints: (builder) =>({
-getCity : builder.query({ query: ()=> createRequest('/places/ip/me') }),
+
+//retrieve the user's location (city)
+getCity : builder.query({ query: ()=> createRequest('/places/ip/me')
+
+ }),
 
 })
 })

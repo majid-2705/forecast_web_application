@@ -13,7 +13,7 @@ const WeekCard = ({index,
                     ,date,
                     minTemperature,
                     maxTemperature,
-                    /*handleDetailChange*/}) =>{
+                    }) =>{
 
 
 

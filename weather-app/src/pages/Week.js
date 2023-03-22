@@ -20,7 +20,7 @@ import {Context} from '../App'
 
 const Week = () =>{
 
-const {clickedCardIndex} = useSelector(state=> state.location)
+const {clickedCardIndex, id} = useSelector(state=> state.location)
 const dispatch = useDispatch()
 const {cityParam} = useParams()
 
@@ -41,7 +41,7 @@ const details = useRef()
 const {locationData} = useContext(Context)
 
 //fetch data of one week, including today's highlight
-const {data: weekData, isLoading: isLoadingWeek, isError: isErrorWeek} = useGetWeekCastQuery(locationData?.locations[0]?.id)
+const {data: weekData, isLoading: isLoadingWeek, isError: isErrorWeek} = useGetWeekCastQuery(id)
 
 return(
         <>

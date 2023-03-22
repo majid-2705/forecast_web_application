@@ -5,6 +5,9 @@ border: 1px solid black;
 box-shadow: 2px 3px 3px 3px gray;
 border-radius: 4px;
 background-color: white;
+width: 32%;
+min-width: 280px;
+height: 150px;
 }
 .card{
 height: 100%;
@@ -58,12 +61,32 @@ width: 24px;
 margin-right: 8px;
 }
 
-@media only screen and (max-width: 425px)
-{
+@media screen and (max-width: 426px) {
 .windDetailsCardContainer{
-
-height: 100%;
 width:100%;
-margin: 0
 }
 }
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+.windDetailsCardContainer{
+min-width: 215px;
+width:48%;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.windDetailsCardContainer{
+min-width: 200px;
+width:48%;
+}
+}
+
+@media screen and (min-width: 1025px) {
+.windDetailsCardContainer{
+min-width: 215px;
+width:32%;
+
+}
+}
+
+
