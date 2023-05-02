@@ -1,18 +1,22 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 
+const host = `${process.env.REACT_APP_HOST_FORECAST}`
+const key = `${process.env.REACT_APP_KEY}`
 
 const cryptoNewsHeader = {
     'x-bingapis-sdk': 'true',
-    'x-rapidapi-host': 'foreca-weather.p.rapidapi.com',
-    'x-rapidapi-key': '6e4bb62ec0msh084a4eb0f5c4a3bp149a1ejsn039034dc54d7',
+    'x-rapidapi-host': host,
+    'x-rapidapi-key':  key,
 };
+
+const _BASEURL = `https://${host}`
 const createRequest = (url) => ({ url, headers: cryptoNewsHeader});
 
 export const weatherApi = createApi({
 reducerPath: 'weatherApi',
 baseQuery : fetchBaseQuery({
-    baseUrl : 'https://foreca-weather.p.rapidapi.com/',
+    baseUrl : _BASEURL
             }),
 endpoints: (builder) =>({
 //Fetch the forecast data based on the user's location
